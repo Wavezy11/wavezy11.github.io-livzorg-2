@@ -49,3 +49,62 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+// IntersectionObserver for fade-in animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
+
+// Scrollspy functionality
+const scrollspyDots = document.querySelectorAll('.scrollspy-dot');
+const sections = ['home', 'diensten', 'over', 'werkwijze', 'contact'];
+
+const updateScrollspy = () => {
+  if (window.innerWidth < 768) return;
+  
+  const scrollPos = window.scrollY + window.innerHeight / 3;
+  
+  sections.forEach((sectionId, index) => {
+    const section = document.getElementById(sectionId);
+    const dot = document.querySelector(`[data-section="${sectionId}"]`);
+    
+    if (section && dot) {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+      
+      if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+        scrollspyDots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      }
+    }
+  });
+};
+
+window.addEventListener('scroll', updateScrollspy);
+window.addEventListener('resize', updateScrollspy);
+updateScrollspy();
+
+// Smooth scroll for scrollspy dots
+scrollspyDots.forEach(dot => {
+  dot.addEventListener('click', e => {
+    e.preventDefault();
+    const sectionId = dot.getAttribute('data-section');
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+});
