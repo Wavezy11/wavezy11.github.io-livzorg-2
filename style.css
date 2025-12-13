@@ -1363,8 +1363,23 @@ ul{padding-left:20px;margin:0;}
     padding-right:var(--space-4)!important;
   }
   .step-head{
-    grid-template-columns:auto 1fr auto;
-    gap:var(--space-2);
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    text-align:center!important;
+    gap:var(--space-3)!important;
+  }
+  .step-head .step-number{
+    order:1;
+  }
+  .step-head h3{
+    order:2;
+    text-align:center!important;
+    width:100%;
+  }
+  .step-head .step-toggle{
+    order:3;
+    margin-top:var(--space-2);
   }
   .step-toggle{
     padding:8px 12px;
@@ -1373,9 +1388,11 @@ ul{padding-left:20px;margin:0;}
   }
   .accordion-panel{
     padding:0 var(--space-4)!important;
+    text-align:center!important;
   }
   .accordion-panel p{
-    margin-left:calc(40px - 8px)!important;
+    margin-left:0!important;
+    text-align:center!important;
   }
   .pillars{
     grid-template-columns:1fr!important;
