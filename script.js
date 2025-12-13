@@ -18,9 +18,32 @@ navList?.querySelectorAll('a').forEach(link => {
   });
 });
 
+// Accordion for process/workwijze section with step-toggle buttons
+const stepToggles = document.querySelectorAll('.step-toggle');
+stepToggles.forEach(btn => {
+  const panel = document.querySelector(`#${btn.getAttribute('aria-controls')}`);
+  if (!panel) return;
+  
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    panel.classList.toggle('open');
+    panel.style.maxHeight = panel.classList.contains('open') ? `${panel.scrollHeight}px` : '0px';
+    
+    // Update button text
+    const toggleText = btn.querySelector('.toggle-text');
+    if (toggleText) {
+      toggleText.textContent = isOpen ? 'Lees meer' : 'Sluiten';
+    }
+  });
+});
+
+// Legacy accordion support (if any remain)
 accordionToggles.forEach(btn => {
   const panel = document.querySelector(`#${btn.getAttribute('aria-controls')}`);
   if (!panel) return;
+  if (btn.classList.contains('step-toggle')) return; // Skip if already handled
+  
   btn.addEventListener('click', () => {
     const isOpen = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!isOpen));
@@ -70,7 +93,7 @@ document.querySelectorAll('.fade-in').forEach(el => {
 
 // Scrollspy functionality
 const scrollspyDots = document.querySelectorAll('.scrollspy-dot');
-const sections = ['home', 'diensten', 'over', 'werkwijze', 'contact'];
+const sections = ['top', 'diensten', 'over', 'werkwijze', 'ervaringen', 'contact'];
 
 const updateScrollspy = () => {
   if (window.innerWidth < 768) return;
@@ -78,7 +101,12 @@ const updateScrollspy = () => {
   const scrollPos = window.scrollY + window.innerHeight / 3;
   
   sections.forEach((sectionId, index) => {
-    const section = document.getElementById(sectionId);
+    let section;
+    if (sectionId === 'top') {
+      section = document.getElementById('top');
+    } else {
+      section = document.getElementById(sectionId);
+    }
     const dot = document.querySelector(`[data-section="${sectionId}"]`);
     
     if (section && dot) {

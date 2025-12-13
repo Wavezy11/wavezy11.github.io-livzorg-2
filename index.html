@@ -25,13 +25,12 @@
           <span class="burger"></span>
         </button>
         <ul class="nav-list" id="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#diensten">Diensten</a></li>
-          <li><a href="#over">Over ons</a></li>
-          <li><a href="#werkwijze">Werkwijze</a></li>
-          <li><a href="#ervaringen">Ervaringen</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#diensten">Diensten</a></li>
+          <li><a href="index.html#over">Over ons</a></li>
+          <li><a href="index.html#werkwijze">Werkwijze</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
           <li><a class="btn primary small" href="aanmelden.html">Aanmelden</a></li>
         </ul>
       </nav>
@@ -41,10 +40,11 @@
   <!-- Vertical Progress Bar (Scrollspy) -->
   <nav class="scrollspy-nav" aria-label="Sectie navigatie">
     <ul class="scrollspy-list">
-      <li><a href="#home" class="scrollspy-dot" data-section="home" aria-label="Home"></a></li>
+      <li><a href="#top" class="scrollspy-dot" data-section="top" aria-label="Home"></a></li>
       <li><a href="#diensten" class="scrollspy-dot" data-section="diensten" aria-label="Diensten"></a></li>
       <li><a href="#over" class="scrollspy-dot" data-section="over" aria-label="Over ons"></a></li>
       <li><a href="#werkwijze" class="scrollspy-dot" data-section="werkwijze" aria-label="Werkwijze"></a></li>
+      <li><a href="#ervaringen" class="scrollspy-dot" data-section="ervaringen" aria-label="Ervaringen"></a></li>
       <li><a href="#contact" class="scrollspy-dot" data-section="contact" aria-label="Contact"></a></li>
     </ul>
   </nav>
@@ -69,32 +69,51 @@
 
     <div class="layout">
 
+      <!-- WELKOM SECTION -->
+      <section class="section welcome bg-soft" id="welkom">
+        <div class="section-header fade-in">
+          <h2>Welkom bij LIV Zorg</h2>
+          <p class="body">Bij Liv Zorg staan wij klaar om mensen te ondersteunen met de zorg die zij nodig hebben, op een manier die écht bij hen past. Wij geloven dat goede zorg begint met persoonlijke aandacht, vertrouwen en een luisterend oor. Ons team biedt professionele begeleiding en ondersteuning, zodat cliënten zich veilig, gehoord en gerespecteerd voelen. Samen kijken we naar wat iemand nodig heeft om het dagelijks leven prettig en zelfstandig te kunnen vormgeven. Of het nu gaat om begeleiding, ondersteuning thuis of een helpende hand bij het vinden van de juiste weg in de zorg: bij Liv Zorg zetten wij de mens centraal.</p>
+        </div>
+        <div class="core-values-grid">
+          <article class="core-value-card fade-in">
+            <div class="core-value-icon">💝</div>
+            <h3>Toegewijd</h3>
+            <p>Bij Liv Zorg staan we naast u. Toewijding betekent voor ons dat we niet alleen zorgen, maar ook meedenken, ondersteunen en écht aanwezig zijn. Wij willen weten wie u bent, wat u belangrijk vindt en hoe wij u het beste kunnen helpen.</p>
+          </article>
+          <article class="core-value-card fade-in">
+            <div class="core-value-icon">👥</div>
+            <h3>Mensgericht</h3>
+            <p>Bij Liv Zorg draait alles om u. Wij geloven dat goede zorg begint met écht luisteren en samen kijken naar wat u belangrijk vindt. Daarom nemen wij de tijd om u te leren kennen en stemmen we onze zorg af op uw wensen, doelen en leefstijl.</p>
+          </article>
+          <article class="core-value-card fade-in">
+            <div class="core-value-icon">⚡</div>
+            <h3>Meebewegend</h3>
+            <p>Bij Liv Zorg begrijpen we dat zorg vaak niet kan wachten. Daarom zorgen wij ervoor dat u snel de ondersteuning krijgt die u nodig heeft. Wij schakelen vlot, zonder ingewikkelde procedures, zodat u direct geholpen bent.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- DIENSTEN SECTION -->
       <section class="section services" id="diensten">
-        <div class="section-header">
+        <div class="section-header fade-in">
           <p class="eyebrow">Onze diensten</p>
           <h2>Ambulante hulpverlening, dagbesteding, begeleid wonen &amp; crisisopvang.</h2>
-          <p class="body">We werken mensgericht, snel inzetbaar en cultuursensitief. Hieronder vindt u de zorgvormen die we bieden, afgestemd op jongeren, volwassenen en gezinnen.</p>
         </div>
         <div class="services-grid">
           <article class="service-card fade-in">
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop" alt="Ambulante hulpverlening" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop" alt="Ambulante hulpverlening - Begeleiding bij u thuis" loading="lazy">
             </div>
-            <div class="service-head">
-              <div class="icon-circle"><span class="feather">↺</span></div>
-              <div>
-                <h3>Ambulante hulpverlening</h3>
-                <p class="tagline">Praktische, psychosociale en opvoedondersteuning op locatie.</p>
-              </div>
-              <button class="accordion-toggle" aria-expanded="false" aria-controls="svc-ambulant">▼</button>
-            </div>
-            <div class="accordion-panel" id="svc-ambulant">
-              <p>Begeleiding bij u thuis of in de eigen leefomgeving. Voor jongeren, volwassenen en gezinnen met praktische hulp, psychosociale begeleiding of opvoedondersteuning.</p>
-              <ul>
-                <li>Ondersteuning in dagelijks leven (structuur, financiën, administratie).</li>
-                <li>Begeleiding bij opvoeding en gezinssituaties.</li>
-                <li>Psychosociale begeleiding en motivatie.</li>
-                <li>Samenwerking met scholen, jeugdzorg en hulpinstanties.</li>
+            <div class="service-content">
+              <h3>Ambulante Hulpverlening</h3>
+              <p class="service-intro">Begeleiding bij u thuis of in de eigen leefomgeving. Onze ambulante hulpverleners ondersteunen jongeren, volwassenen en gezinnen op locatie.</p>
+              <p class="service-description">Dit kan gaan om praktische hulp, psychosociale begeleiding of ondersteuning bij opvoeding en gezinsproblemen. Wij werken samen met u en uw netwerk om doelen te stellen en stap voor stap vooruitgang te boeken.</p>
+              <ul class="service-features">
+                <li>Ondersteuning in het dagelijks leven (structuur, financiën, administratie)</li>
+                <li>Begeleiding bij opvoeding en gezinssituaties</li>
+                <li>Psychosociale begeleiding en motivatie</li>
+                <li>Samenwerking met scholen, jeugdzorg en hulpinstanties</li>
               </ul>
               <a class="btn primary small" href="aanmelden.html">Aanmelden</a>
             </div>
@@ -103,21 +122,15 @@
             <div class="service-image">
               <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&h=600&fit=crop" alt="Dagbesteding" loading="lazy">
             </div>
-            <div class="service-head">
-              <div class="icon-circle"><span class="feather">🌱</span></div>
-              <div>
-                <h3>Dagbesteding</h3>
-                <p class="tagline">Vaardigheden ontwikkelen, sociale contacten opbouwen.</p>
-              </div>
-              <button class="accordion-toggle" aria-expanded="false" aria-controls="svc-dagbesteding">▼</button>
-            </div>
-            <div class="accordion-panel" id="svc-dagbesteding">
-              <p>Zinvolle invulling van de dag met persoonlijke groei: vaardigheden ontwikkelen, sociale contacten opbouwen en zelfvertrouwen versterken.</p>
-              <ul>
-                <li>Activiteiten afgestemd op interesses en mogelijkheden.</li>
-                <li>Training in sociale vaardigheden en samenwerking.</li>
-                <li>Voorbereiding op werk, school of vrijwilligerswerk.</li>
-                <li>Veilige omgeving waar iedereen zich welkom voelt.</li>
+            <div class="service-content">
+              <h3>Dagbesteding</h3>
+              <p class="service-intro">Zinvolle invulling van de dag en werken aan persoonlijke groei.</p>
+              <p class="service-description">Dagbesteding bij LIV Zorg is gericht op het ontwikkelen van vaardigheden, het opbouwen van sociale contacten en het versterken van zelfvertrouwen. We bieden een gestructureerd programma met creatieve, sportieve en praktische activiteiten.</p>
+              <ul class="service-features">
+                <li>Activiteiten afgestemd op persoonlijke interesses en mogelijkheden</li>
+                <li>Training in sociale vaardigheden en samenwerking</li>
+                <li>Voorbereiding op werk, school of vrijwilligerswerk</li>
+                <li>Een veilige omgeving waar iedereen zich welkom voelt</li>
               </ul>
               <a class="btn primary small" href="aanmelden.html">Aanmelden</a>
             </div>
@@ -126,20 +139,14 @@
             <div class="service-image">
               <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop" alt="Begeleid wonen" loading="lazy">
             </div>
-            <div class="service-head">
-              <div class="icon-circle"><span class="feather">🏠</span></div>
-              <div>
-                <h3>Begeleid wonen</h3>
-                <p class="tagline">Veilige plek om tot rust te komen en te werken aan herstel.</p>
-              </div>
-              <button class="accordion-toggle" aria-expanded="false" aria-controls="svc-wonen">▼</button>
-            </div>
-            <div class="accordion-panel" id="svc-wonen">
-              <p>Kleinschalig, huiselijk wonen voor jongeren en volwassenen die tijdelijk niet zelfstandig kunnen wonen. Begeleiding en veiligheid met ruimte om weer vrij te leven.</p>
-              <ul>
-                <li>Structuur, begeleiding en ondersteuning naar zelfstandigheid.</li>
-                <li>Focus op dagritme, sociale vaardigheden en zelfredzaamheid.</li>
-                <li>Respect voor eigen identiteit, achtergrond en leefstijl.</li>
+            <div class="service-content">
+              <h3>Begeleid Wonen</h3>
+              <p class="service-intro">Een veilige plek om tot rust te komen en te werken aan herstel.</p>
+              <p class="service-description">Bij LIV Zorg bieden wij begeleid wonen aan voor jongeren en volwassenen die (tijdelijk) niet zelfstandig kunnen wonen. In een kleinschalige, huiselijke omgeving krijgt u structuur, begeleiding en ondersteuning. Samen werken we aan zelfredzaamheid, het opbouwen van dagritme en het versterken van sociale vaardigheden.</p>
+              <ul class="service-features">
+                <li>Mensen met psychosociale problemen</li>
+                <li>Jongeren of volwassenen in een kwetsbare situatie</li>
+                <li>Cliënten die een veilige tussenstap nodig hebben naar zelfstandig wonen</li>
               </ul>
               <a class="btn primary small" href="aanmelden.html">Aanmelden</a>
             </div>
@@ -148,20 +155,14 @@
             <div class="service-image">
               <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop" alt="Crisisopvang" loading="lazy">
             </div>
-            <div class="service-head">
-              <div class="icon-circle"><span class="feather">⚡</span></div>
-              <div>
-                <h3>Crisisopvang</h3>
-                <p class="tagline">Direct hulp en een veilige plek in een noodsituatie.</p>
-              </div>
-              <button class="accordion-toggle" aria-expanded="false" aria-controls="svc-crisis">▼</button>
-            </div>
-            <div class="accordion-panel" id="svc-crisis">
-              <p>24/7 inzetbaar bij onveilige thuissituaties of plotselinge opvangvragen. We bieden rust, veiligheid en begeleiding.</p>
-              <ul>
-                <li>Veilige en rustige omgeving.</li>
-                <li>Persoonlijke begeleiding en crisisinterventie.</li>
-                <li>Ondersteuning bij vervolghulp en doorstroom.</li>
+            <div class="service-content">
+              <h3>Crisisopvang</h3>
+              <p class="service-intro">Direct hulp in een noodsituatie.</p>
+              <p class="service-description">Soms is er acuut een veilige plek nodig. Onze crisisopvang is 24/7 beschikbaar voor mensen die plotseling zonder woonplek zitten of in een onveilige thuissituatie verkeren. We bieden rust, veiligheid en professionele begeleiding, zodat er snel gewerkt kan worden aan stabiliteit en vervolgstappen.</p>
+              <ul class="service-features">
+                <li>Veilige en rustige omgeving</li>
+                <li>Persoonlijke begeleiding en crisisinterventie</li>
+                <li>Ondersteuning bij vervolghulp en doorstroom naar wonen of behandeling</li>
               </ul>
               <a class="btn primary small" href="aanmelden.html">Aanmelden</a>
             </div>
@@ -169,170 +170,233 @@
         </div>
       </section>
 
-      <section class="section about" id="over">
+      <!-- OVER ONS SECTION -->
+      <section class="section about bg-soft" id="over">
         <div class="section-header fade-in">
           <p class="eyebrow">Over LIV Zorg</p>
           <h2>Werken vanuit de kracht van de professional.</h2>
-          <p class="body">We bieden persoonlijke, veilige en deskundige zorg op maat. Onze medewerkers brengen kennis, betrokkenheid en menselijkheid mee en werken cultuursensitief samen met cliënten, familie en ketenpartners.</p>
-          <p class="body">Bij LIV Zorg geloven we dat begeleiding en vrijheid hand in hand gaan. Ons doel is dat cliënten de regie over hun leven terugkrijgen: van begeleid wonen naar vrij leven, stap voor stap, op eigen tempo.</p>
         </div>
-        <div class="pillars">
-          <article class="card mini accent fade-in">
-            <h3>Missie</h3>
-            <p>Jeugdigen en volwassenen ondersteunen met professionele begeleiding, met behoud van eigen regie in een veilige woon- en leeromgeving.</p>
-          </article>
-          <article class="card mini fade-in">
+        <div class="mission-quote fade-in">
+          <p class="mission-text">Onze missie is om jeugdigen en volwassenen die vastlopen in hun leven te ondersteunen met professionele begeleiding, waarbij zij de regie behouden over hun eigen traject. Door het bieden van een veilige woonomgeving en op maat gemaakt ondersteuningsplan helpen wij hun zelfstandigheid te vergroten en hun plek in de maatschappij te versterken met behoud van hun eigen identiteit, geloofsovertuiging of seksuele voorkeur.</p>
+        </div>
+        <div class="about-who fade-in">
+          <h3>Wie zijn wij</h3>
+          <p>LIV zorg is opgericht door een team van zeer ervaren professionals met meer dan 25 jaar ervaring in de zorg. Wij zetten ons in voor een inclusieve samenleving waarin gelijkwaardigheid, diversiteit en mensgerichtheid centraal staan.</p>
+        </div>
+        <div class="about-grid">
+          <article class="about-card fade-in">
             <h3>Visie</h3>
-            <p>Iedereen krijgt ruimte om zich te ontwikkelen. We bieden maatwerk, denken in oplossingen en leveren effectieve persoonsgerichte zorg.</p>
+            <p>Bij LIV zorg streven wij naar een samenleving waarbij iedereen de kans krijgt om zich te ontwikkelen, ongeacht de uitdagingen die op hun pad komen. Onze kracht ligt in maatwerk, denken in oplossingen en het bieden van effectieve persoonsgerichte zorg. Door samen te werken met zorgprofessionals, ketenpartners en het persoonlijke netwerk creëren wij een betrokken en innovatieve zorgomgeving.</p>
           </article>
-          <article class="card mini accent fade-in">
+          <article class="about-card fade-in">
             <h3>Kernpunten</h3>
-            <p>Snel en adequaat, mensgericht en veilig, professioneel, transparant, op maat en samen.</p>
+            <ul class="core-values-list">
+              <li>Snel en adequaat</li>
+              <li>Efficiënt en doelgericht</li>
+              <li>Mensgericht en een veilige omgeving</li>
+              <li>Professioneel en vakbekwaam</li>
+              <li>Op maat en samen</li>
+              <li>Eerlijk, transparant en zonder oordeel</li>
+              <li>Doorzettingskracht</li>
+              <li>Passie voor het vak</li>
+              <li>Verschil maken</li>
+            </ul>
           </article>
         </div>
       </section>
 
+      <!-- WAAROM LIV ZORG SECTION -->
       <section class="section" id="waarom">
         <div class="section-header fade-in">
           <p class="eyebrow">Waarom LIV Zorg</p>
           <h2>Persoonlijke, deskundige en snel beschikbare zorg.</h2>
-          <p class="body">Bij LIV Zorg krijgt iedereen ondersteuning die veilig, betrouwbaar en op maat is, met ruimte voor eigen regie en groei.</p>
         </div>
-        <div class="pillars">
-          <article class="card accent fade-in">
-            <h3>Snel &amp; Adequaat</h3>
-            <p>Geen lange wachtlijsten: van eerste contact naar start van zorg in korte tijd. We reageren snel en adequaat op uw hulpvraag.</p>
-          </article>
-          <article class="card fade-in">
-            <h3>Transparant</h3>
-            <p>Eerlijke communicatie, duidelijke afspraken en openheid over wat we kunnen bieden. Geen verrassingen, wel duidelijkheid.</p>
-          </article>
-          <article class="card accent fade-in">
-            <h3>Cultuursensitief</h3>
-            <p>We hebben oog voor taal, achtergrond en gewoontes. Ons team spreekt meerdere talen en werkt respectvol met verschillende culturen.</p>
-          </article>
-          <article class="card fade-in">
-            <h3>Eigen Regie</h3>
-            <p>U blijft zoveel mogelijk zelf de richting bepalen. Wij ondersteunen waar nodig, maar respecteren uw keuzes en autonomie.</p>
-          </article>
-          <article class="card accent fade-in">
-            <h3>Professioneel</h3>
-            <p>Onze medewerkers combineren deskundigheid met betrokkenheid. We werken volgens hoge kwaliteitsnormen en blijven continu leren.</p>
-          </article>
+        <div class="features-grid">
+          <div class="feature-item fade-in">
+            <div class="feature-icon">⚡</div>
+            <h3>Snel inzetbaar</h3>
+            <p>Geen lange wachtlijsten, wij staan direct klaar.</p>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">💼</div>
+            <h3>Kracht van de professional</h3>
+            <p>Onze medewerkers krijgen de ruimte om hun deskundigheid en betrokkenheid in te zetten.</p>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">⭐</div>
+            <h3>Streven naar kwaliteit</h3>
+            <p>Continu verbeteren, luisteren naar cliënten en werken volgens hoge kwaliteitsnormen.</p>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">📋</div>
+            <h3>Compleet aanbod</h3>
+            <p>Begeleid wonen, crisisopvang, ambulante hulp &amp; dagbesteding – één organisatie, meerdere vormen van zorg.</p>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🌐</div>
+            <h3>Cultuursensitief en divers</h3>
+            <p>We hebben oog voor taal, achtergrond en gewoontes.</p>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="feature-icon">🎯</div>
+            <h3>Eigen regie</h3>
+            <p>U blijft zoveel mogelijk zelf de richting bepalen, wij ondersteunen waar nodig.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section process" id="werkwijze">
+      <!-- WERKWIJZE SECTION -->
+      <section class="section process bg-soft" id="werkwijze">
         <div class="section-header fade-in">
           <p class="eyebrow">Onze werkwijze</p>
           <h2>Heldere stappen met persoonlijke begeleiding.</h2>
         </div>
         <ol class="steps">
           <li class="step fade-in">
-            <div class="step-head"><span class="step-number">1</span><h3>Intake</h3><button class="accordion-toggle" aria-expanded="false" aria-controls="step1">▼</button></div>
-            <div class="accordion-panel" id="step1"><p>Kennismaking en aanmeldprocedure: we brengen de hulpvraag in kaart, beoordelen of deze past binnen LIV Zorg en stemmen verwachtingen af met cliënt en netwerk.</p></div>
+            <div class="step-head">
+              <span class="step-number">1</span>
+              <h3>INTAKE</h3>
+              <button class="btn step-toggle" aria-expanded="false" aria-controls="step1">
+                <span class="toggle-text">Lees meer</span>
+                <span class="toggle-icon">▼</span>
+              </button>
+            </div>
+            <div class="accordion-panel" id="step1"><p>Aan de hand van een kennismakingsgesprek en de aanmeldprocedure brengen we de hulpvraag in kaart en kijken wij samen of de hulpvraag past binnen LIV zorg.</p></div>
           </li>
           <li class="step fade-in">
-            <div class="step-head"><span class="step-number">2</span><h3>Persoonlijk begeleidingsplan</h3><button class="accordion-toggle" aria-expanded="false" aria-controls="step2">▼</button></div>
-            <div class="accordion-panel" id="step2"><p>Samen met cliënten stellen we doelen op meerdere leefgebieden (financiën, wonen, werken/dagbesteding, sociale vaardigheden). We evalueren periodiek, betrekken het netwerk en sturen bij waar nodig.</p></div>
+            <div class="step-head">
+              <span class="step-number">2</span>
+              <h3>EEN PERSOONLIJK BEGELEIDINGSPLAN</h3>
+              <button class="btn step-toggle" aria-expanded="false" aria-controls="step2">
+                <span class="toggle-text">Lees meer</span>
+                <span class="toggle-icon">▼</span>
+              </button>
+            </div>
+            <div class="accordion-panel" id="step2"><p>In het begeleidingsplan zullen de cliënten samen met de persoonlijke begeleider doelen opstellen op meerdere leefgebieden, zoals; financiën, levensloopbegeleiding, wonen, werken/dagbesteding en vrije tijd. Periodiek evalueren wij de voortgang en de effectiviteit van de zorg.</p></div>
           </li>
           <li class="step fade-in">
-            <div class="step-head"><span class="step-number">3</span><h3>Afsluiting &amp; nazorg</h3><button class="accordion-toggle" aria-expanded="false" aria-controls="step3">▼</button></div>
-            <div class="accordion-panel" id="step3"><p>Bij behaalde doelen ronden we af en maken we vervolgafspraken. Indien nodig bieden we nazorg of verwijzen we door voor verdere ondersteuning en borging van de vooruitgang.</p></div>
+            <div class="step-head">
+              <span class="step-number">3</span>
+              <h3>AFSLUITING EN NAZORG</h3>
+              <button class="btn step-toggle" aria-expanded="false" aria-controls="step3">
+                <span class="toggle-text">Lees meer</span>
+                <span class="toggle-icon">▼</span>
+              </button>
+            </div>
+            <div class="accordion-panel" id="step3"><p>Wanneer de gestelde doelen zijn behaald ronden we de begeleiding af, indien nodig bieden we nazorg of verwijzen wij door naar andere instanties voor verdere ondersteuning.</p></div>
           </li>
         </ol>
-        <div class="info-box">
-          <div class="split">
-            <div>
+      </section>
+
+      <!-- TEAM SECTION -->
+      <section class="section team" id="team">
+        <div class="team-split">
+          <div class="team-image fade-in">
+            <img src="assets/team.webp" alt="Team LIV Zorg in overleg" loading="lazy">
+          </div>
+          <div class="team-content">
+            <div class="section-header fade-in">
+              <p class="eyebrow">Team LIV Zorg</p>
+              <h2>Betrokken, deskundig en cultuursensitief.</h2>
+              <p class="body">Bij LIV Zorg geloven we dat goede zorg begint bij de mensen die haar geven. Ons team bestaat uit betrokken, deskundige en enthousiaste professionals die zich dagelijks inzetten voor het welzijn van onze cliënten.</p>
+            </div>
+            <div class="team-special fade-in">
               <h3>Wat ons team bijzonder maakt</h3>
-              <ul>
-                <li>Deskundig &amp; ervaren: goed opgeleide hulpverleners met veel praktijkervaring.</li>
-                <li>Betrokken &amp; menselijk: we kijken naar de hele mens.</li>
-                <li>Divers &amp; cultuursensitief: oog voor achtergrond en taal.</li>
-                <li>Samen sterk: één team met cliënten, familie en ketenpartners.</li>
+              <ul class="team-values">
+                <li>
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Deskundig &amp; ervaren</strong>
+                    <p>Onze hulpverleners en begeleiders zijn goed opgeleid en brengen veel praktijkervaring mee.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Betrokken &amp; menselijk</strong>
+                    <p>We kijken niet alleen naar de zorgvraag, maar naar de hele mens.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Divers &amp; cultuursensitief</strong>
+                    <p>Ons team spreekt verschillende talen en heeft oog voor ieders achtergrond en cultuur.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Samen sterk</strong>
+                    <p>We werken als één team, samen met cliënten, hun familie en ketenpartners.</p>
+                  </div>
+                </li>
               </ul>
             </div>
-            <div class="media">
-              <img src="assets/team.webp" alt="Team in overleg" loading="lazy">
+            <div class="team-roles fade-in">
+              <h3>Rollen</h3>
+              <ul class="roles-list">
+                <li>Begeleiders</li>
+                <li>Ambulant hulpverleners</li>
+                <li>Coaches &amp; activiteitenbegeleiders</li>
+                <li>Coördinatoren &amp; management</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section testimonials" id="ervaringen">
+      <!-- ERVARINGEN SECTION -->
+      <section class="section testimonials bg-soft" id="ervaringen">
         <div class="section-header fade-in">
           <p class="eyebrow">Ervaringen</p>
           <h2>Momenten van warmte en zorg.</h2>
-          <p class="body">Cliënten waarderen onze snelle inzet, het meedenken en de oprechte aandacht. Enkele ervaringen:</p>
         </div>
         <div class="pillars">
           <article class="card accent fade-in">
             <p><em>"Wat ik het meest waardeer aan Liv Zorg is dat ze er altijd zijn. Ze denken mee, schakelen snel en doen dat met oprechte aandacht. Ik voel me geen nummer, maar echt gezien."</em></p>
-            <p><strong>Maulicio</strong></p>
+            <p><strong>— Maulicio</strong></p>
           </article>
           <article class="card fade-in">
             <p><em>"Toen ik bij Liv Zorg aanklopte, werd er echt naar mij geluisterd. Binnen een paar dagen was alles geregeld en stond er iemand aan mijn deur die precies begreep wat ik nodig had."</em></p>
-            <p><strong>Emma</strong></p>
+            <p><strong>— Emma</strong></p>
           </article>
           <article class="card accent fade-in">
             <p><em>"De medewerkers zijn meer dan zorgverleners, ze voelen als steun in mijn dagelijks leven. Altijd met een glimlach en oprechte betrokkenheid."</em></p>
-            <p><strong>Mevrouw Hassan</strong></p>
+            <p><strong>— Mevrouw Hassan</strong></p>
           </article>
         </div>
       </section>
 
-      <section class="section team" id="team">
-        <div class="section-header fade-in">
-          <p class="eyebrow">Team LIV Zorg</p>
-          <h2>Betrokken, deskundig en cultuursensitief.</h2>
-          <p class="body">Ons team bestaat uit begeleiders, ambulant hulpverleners, coaches en coördinatoren die samenwerken voor kwaliteit, afstemming en continuïteit. We spreken meerdere talen en werken nauw samen met familie en ketenpartners.</p>
-          <div class="media fade-in" style="margin-top:var(--space-4);">
-            <img src="assets/team.webp" alt="Team LIV Zorg in overleg" loading="lazy">
-          </div>
-        </div>
-        <div class="values-grid">
-          <article class="card mini accent">
-            <div class="icon-circle sm">★</div>
-            <h3>Deskundig &amp; ervaren</h3>
-            <p>Goed opgeleide hulpverleners met veel praktijkervaring.</p>
-          </article>
-          <article class="card mini">
-            <div class="icon-circle sm">❤</div>
-            <h3>Betrokken &amp; menselijk</h3>
-            <p>We kijken naar de hele mens en werken met oprechte aandacht.</p>
-          </article>
-          <article class="card mini accent">
-            <div class="icon-circle sm">🌐</div>
-            <h3>Divers &amp; cultuursensitief</h3>
-            <p>We spreken meerdere talen en hebben oog voor achtergrond en cultuur.</p>
-          </article>
-          <article class="card mini">
-            <div class="icon-circle sm">🤝</div>
-            <h3>Samen sterk</h3>
-            <p>Één team met cliënten, familie en ketenpartners.</p>
-          </article>
-        </div>
-      </section>
-
+      <!-- CONTACT SECTION -->
       <section class="section contact" id="contact">
         <div class="section-header fade-in">
           <p class="eyebrow">Contact</p>
-          <h2>Neem direct contact op of meld u aan.</h2>
+          <h2>Neem direct contact op.</h2>
         </div>
         <div class="contact-grid">
           <div class="contact-card">
             <h3>Bereikbaarheid</h3>
             <p class="body">Parkweg 226 A<br>3119 CR Schiedam</p>
             <p class="body">Telefoon: <a href="tel:0852129384">085 - 2129 384</a><br>WhatsApp: <a href="https://api.whatsapp.com/send?phone=31617540597">+31 617 54 05 97</a><br>E-mail: <a href="mailto:info@livzorg.nl">info@livzorg.nl</a></p>
-            <p class="body">Openingstijden: ma-vr 09:00 - 18:00 uur<br>Za-zo gesloten</p>
+            <p class="body">Openingstijden: ma-vr 09:00 - 18:00 uur<br>Zaterdag en zondag gesloten</p>
             <div class="social">
-              <a href="https://linkedin.com/company/liv-zorg" aria-label="LinkedIn">in</a>
-              <a href="https://youtube.com/@livzorg" aria-label="YouTube">YT</a>
-              <a href="https://tiktok.com/@livzorg" aria-label="TikTok">TT</a>
-              <a href="https://instagram.com/liv.zorg" aria-label="Instagram">IG</a>
+              <a href="https://linkedin.com/company/liv-zorg" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://youtube.com/@livzorg" aria-label="YouTube" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://tiktok.com/@livzorg" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+              </a>
+              <a href="https://instagram.com/liv.zorg" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
             </div>
           </div>
           <div class="form-card">
+            <h3>Stuur een bericht</h3>
             <form action="https://formspree.io/f/mlddyjap" method="POST" class="form" novalidate>
               <div class="field">
                 <label for="name">Naam *</label>
@@ -353,10 +417,10 @@
               <p class="small">Door te verzenden gaat u akkoord met onze privacyverklaring.</p>
               <button type="submit" class="btn primary full">Verzenden</button>
             </form>
-            <div class="map-wrap" aria-label="Kaart">
-              <iframe title="LIV Zorg locatie" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.781877253495!2d4.392165076580667!3d51.92189617191803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4341c6f16f7df%3A0x8ad0da3ba93926ab!2sParkweg%20226a%2C%203119%20CR%20Schiedam!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"></iframe>
-            </div>
           </div>
+        </div>
+        <div class="map-wrap" style="margin-top:var(--space-6);">
+          <iframe title="LIV Zorg locatie" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.781877253495!2d4.392165076580667!3d51.92189617191803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4341c6f16f7df%3A0x8ad0da3ba93926ab!2sParkweg%20226a%2C%203119%20CR%20Schiedam!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"></iframe>
         </div>
       </section>
     </div>
@@ -385,7 +449,8 @@
           <li><a href="index.html#diensten">Diensten</a></li>
           <li><a href="index.html#over">Over ons</a></li>
           <li><a href="index.html#werkwijze">Werkwijze</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="vacatures.html">Vacatures</a></li>
         </ul>
       </div>
       <div>
@@ -416,4 +481,3 @@
   <script src="script.js" defer></script>
 </body>
 </html>
-
