@@ -37,7 +37,8 @@ input,select,textarea,button{
 }
 html{
   width:100%;
-  overflow-x:auto;
+  overflow-x:hidden;
+  max-width:100vw;
 }
 body{
   margin:0;
@@ -47,8 +48,9 @@ body{
   color:var(--liv-text-dark);
   line-height:1.6;
   width:100%;
+  max-width:100vw;
   position:relative;
-  overflow-x:auto;
+  overflow-x:hidden;
 }
 h1,h2,h3,h4{
   font-family:"Poppins","Inter",sans-serif;
@@ -291,6 +293,7 @@ ul{padding-left:20px;margin:0;}
   gap:var(--space-4);
   width:100%;
   align-items:stretch;
+  min-width:0;
 }
 .card{
   padding:var(--space-5);
@@ -302,6 +305,9 @@ ul{padding-left:20px;margin:0;}
   display:flex;
   flex-direction:column;
   height:100%;
+  min-width:0;
+  overflow-wrap:break-word;
+  word-wrap:break-word;
 }
 .card:hover{
   transform:translateY(-6px);
@@ -322,6 +328,7 @@ ul{padding-left:20px;margin:0;}
   grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));
   gap:var(--space-6);margin-top:var(--space-8);
   width:100%;
+  min-width:0;
 }
 .core-value-card{
   background:rgba(255,255,255,0.9);
@@ -424,6 +431,12 @@ ul{padding-left:20px;margin:0;}
   gap:var(--space-6);max-width:1200px;margin:0 auto;
   width:100%;
   box-sizing:border-box;
+  min-width:0;
+}
+.feature-item{
+  min-width:0;
+  overflow-wrap:break-word;
+  word-wrap:break-word;
 }
 .feature-item{
   text-align:center;padding:var(--space-6);
@@ -533,6 +546,7 @@ ul{padding-left:20px;margin:0;}
   gap:var(--space-6);
   width:100%;
   box-sizing:border-box;
+  min-width:0;
 }
 .service-card{
   background:#fff;border-radius:24px;
@@ -646,6 +660,7 @@ ul{padding-left:20px;margin:0;}
   display:grid;grid-template-columns:1fr 1fr;
   gap:var(--space-6);align-items:start;
   margin-bottom:var(--space-6);
+  min-width:0;
 }
 .contact-info-grid{
   display:grid;grid-template-columns:1fr 1fr;
@@ -906,7 +921,7 @@ ul{padding-left:20px;margin:0;}
     padding:var(--space-4);border-radius:var(--radius-lg);
     box-shadow:var(--shadow-lg);
     min-width:240px;
-    max-width:calc(100vw - var(--space-4));
+    max-width:calc(100% - var(--space-4));
     width:auto;
     transform:translateY(-8px);opacity:0;
     pointer-events:none;transition:opacity .2s ease,transform .2s ease;
@@ -1033,13 +1048,13 @@ ul{padding-left:20px;margin:0;}
   .whatsapp-button{
     width:52px;height:52px;
     right:12px;bottom:12px;
-    max-width:calc(100vw - 24px);
+    max-width:calc(100% - 24px);
   }
   .whatsapp-button svg{width:24px;height:24px;}
   .floating-top{
     right:12px;bottom:72px;
     width:40px;height:40px;
-    max-width:calc(100vw - 24px);
+    max-width:calc(100% - 24px);
   }
   .services-grid{
     grid-template-columns:1fr!important;
@@ -1094,7 +1109,7 @@ ul{padding-left:20px;margin:0;}
   .core-value-icon{font-size:2.5rem;}
   .nav-list{
     min-width:auto!important;
-    width:calc(100vw - var(--space-4))!important;
+    width:calc(100% - var(--space-4))!important;
     max-width:280px;
     right:var(--space-2);
   }
@@ -1414,6 +1429,41 @@ ul{padding-left:20px;margin:0;}
 }
 
 /* ============================================
+   GLOBAL GRID SAFETY - Voorkom grid blowout
+   ============================================ */
+.pillars,
+.core-values-grid,
+.services-grid,
+.features-grid,
+.contact-grid,
+.contact-info-grid,
+.about-grid,
+.team-split,
+.footer-grid{
+  min-width:0;
+}
+.pillars > *,
+.core-values-grid > *,
+.services-grid > *,
+.features-grid > *,
+.contact-grid > *,
+.contact-info-grid > *,
+.about-grid > *,
+.team-split > *,
+.footer-grid > *,
+.card,
+.service-card,
+.feature-item,
+.core-value-card,
+.about-card,
+.contact-card,
+.form-card{
+  min-width:0;
+  overflow-wrap:break-word;
+  word-wrap:break-word;
+}
+
+/* ============================================
    GLOBAL MOBILE FIX - Vangnet voor overige elementen
    ============================================ */
 @media (max-width:767px){
@@ -1486,7 +1536,7 @@ ul{padding-left:20px;margin:0;}
   .floating-top,
   .whatsapp-button,
   .scrollspy-nav{
-    max-width:calc(100vw - 24px)!important;
+    max-width:calc(100% - 24px)!important;
     right:12px!important;
     left:auto!important;
   }
