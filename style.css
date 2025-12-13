@@ -1011,11 +1011,11 @@ ul{padding-left:20px;margin:0;}
     padding-right:var(--space-4)!important;
   }
   .layout{
+    display:block!important;
     padding:var(--space-6) var(--space-4)!important;
     width:100%!important;
     max-width:100%!important;
-    box-sizing:border-box;
-    gap:var(--space-5);
+    box-sizing:border-box!important;
     margin:0!important;
     padding-left:var(--space-4)!important;
     padding-right:var(--space-4)!important;
@@ -1033,12 +1033,13 @@ ul{padding-left:20px;margin:0;}
     max-width:100%;
   }
   .section{
+    display:block!important;
     padding:var(--space-5) var(--space-4)!important;
     border-radius:20px;
     width:100%!important;
     max-width:100%!important;
     box-sizing:border-box!important;
-    margin:0!important;
+    margin:0 auto var(--space-5)!important;
     padding-left:var(--space-4)!important;
     padding-right:var(--space-4)!important;
   }
