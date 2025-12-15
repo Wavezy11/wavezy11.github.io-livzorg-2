@@ -1,42 +1,41 @@
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
 const navList = document.querySelector('.nav-list');
+const navClose = document.querySelector('.nav-close');
 const accordionToggles = document.querySelectorAll('.accordion-toggle');
 const floatingTop = document.querySelector('.floating-top');
 
+const openNav = () => {
+  nav.classList.add('nav-open');
+  navToggle?.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeNav = () => {
+  nav.classList.remove('nav-open');
+  navToggle?.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+};
+
 if (navToggle) {
   navToggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('nav-open');
-    navToggle.setAttribute('aria-expanded', String(open));
+    if (nav.classList.contains('nav-open')) {
+      closeNav();
+    } else {
+      openNav();
+    }
   });
 }
 
+if (navClose) {
+  navClose.addEventListener('click', closeNav);
+}
+
 navList?.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('nav-open');
-    navToggle?.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', closeNav);
 });
 
-// Accordion for process/workwijze section with step-toggle buttons
-const stepToggles = document.querySelectorAll('.step-toggle');
-stepToggles.forEach(btn => {
-  const panel = document.querySelector(`#${btn.getAttribute('aria-controls')}`);
-  if (!panel) return;
-  
-  btn.addEventListener('click', () => {
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!isOpen));
-    panel.classList.toggle('open');
-    panel.style.maxHeight = panel.classList.contains('open') ? `${panel.scrollHeight}px` : '0px';
-    
-    // Update button text
-    const toggleText = btn.querySelector('.toggle-text');
-    if (toggleText) {
-      toggleText.textContent = isOpen ? 'Lees meer' : 'Sluiten';
-    }
-  });
-});
+// Step-toggle accordion removed - content is now always visible
 
 // Legacy accordion support (if any remain)
 accordionToggles.forEach(btn => {

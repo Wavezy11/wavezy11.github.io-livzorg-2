@@ -25,6 +25,11 @@
           <span class="burger"></span>
         </button>
         <ul class="nav-list" id="nav-list">
+          <li class="nav-close-wrapper">
+            <button class="nav-close" aria-label="Sluit menu">
+              <span aria-hidden="true">✕</span>
+            </button>
+          </li>
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#diensten">Diensten</a></li>
           <li><a href="index.html#over">Over ons</a></li>
@@ -103,7 +108,7 @@
         <div class="services-grid">
           <article class="service-card">
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop" alt="Ambulante hulpverlening - Begeleiding bij u thuis" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&h=600&fit=crop" alt="Ambulante hulpverlening - Begeleiding bij u thuis" loading="lazy">
             </div>
             <div class="service-content">
               <h3>Ambulante Hulpverlening</h3>
@@ -256,50 +261,41 @@
             <div class="step-head">
               <span class="step-number">1</span>
               <h3>INTAKE</h3>
-              <button class="btn step-toggle" aria-expanded="false" aria-controls="step1">
-                <span class="toggle-text">Lees meer</span>
-                <span class="toggle-icon">▼</span>
-              </button>
             </div>
-            <div class="accordion-panel" id="step1"><p>Aan de hand van een kennismakingsgesprek en de aanmeldprocedure brengen we de hulpvraag in kaart en kijken wij samen of de hulpvraag past binnen LIV zorg.</p></div>
+            <div class="step-content">
+              <p>Aan de hand van een kennismakingsgesprek en de aanmeldprocedure brengen we de hulpvraag in kaart en kijken wij samen of de hulpvraag past binnen LIV zorg.</p>
+            </div>
           </li>
           <li class="step">
             <div class="step-head">
               <span class="step-number">2</span>
               <h3>EEN PERSOONLIJK BEGELEIDINGSPLAN</h3>
-              <button class="btn step-toggle" aria-expanded="false" aria-controls="step2">
-                <span class="toggle-text">Lees meer</span>
-                <span class="toggle-icon">▼</span>
-              </button>
             </div>
-            <div class="accordion-panel" id="step2"><p>In het begeleidingsplan zullen de cliënten samen met de persoonlijke begeleider doelen opstellen op meerdere leefgebieden, zoals; financiën, levensloopbegeleiding, wonen, werken/dagbesteding en vrije tijd. Periodiek evalueren wij de voortgang en de effectiviteit van de zorg.</p></div>
+            <div class="step-content">
+              <p>In het begeleidingsplan zullen de cliënten samen met de persoonlijke begeleider doelen opstellen op meerdere leefgebieden, zoals; financiën, levensloopbegeleiding, wonen, werken/dagbesteding en vrije tijd. Periodiek evalueren wij de voortgang en de effectiviteit van de zorg.</p>
+            </div>
           </li>
           <li class="step">
             <div class="step-head">
               <span class="step-number">3</span>
               <h3>AFSLUITING EN NAZORG</h3>
-              <button class="btn step-toggle" aria-expanded="false" aria-controls="step3">
-                <span class="toggle-text">Lees meer</span>
-                <span class="toggle-icon">▼</span>
-              </button>
             </div>
-            <div class="accordion-panel" id="step3"><p>Wanneer de gestelde doelen zijn behaald ronden we de begeleiding af, indien nodig bieden we nazorg of verwijzen wij door naar andere instanties voor verdere ondersteuning.</p></div>
+            <div class="step-content">
+              <p>Wanneer de gestelde doelen zijn behaald ronden we de begeleiding af, indien nodig bieden we nazorg of verwijzen wij door naar andere instanties voor verdere ondersteuning.</p>
+            </div>
           </li>
         </ol>
       </section>
 
       <!-- TEAM SECTION -->
       <section class="section team" id="team">
-        <div class="team-split">
-          <div class="team-image">
-            <img src="assets/team.webp" alt="Team LIV Zorg in overleg" loading="lazy">
+        <div class="team-content">
+          <div class="section-header">
+            <p class="eyebrow">Team LIV Zorg</p>
+            <h2>Betrokken, deskundig en cultuursensitief.</h2>
+            <p class="body">Bij LIV Zorg geloven we dat goede zorg begint bij de mensen die haar geven. Ons team bestaat uit betrokken, deskundige en enthousiaste professionals die zich dagelijks inzetten voor het welzijn van onze cliënten.</p>
           </div>
-          <div class="team-content">
-            <div class="section-header">
-              <p class="eyebrow">Team LIV Zorg</p>
-              <h2>Betrokken, deskundig en cultuursensitief.</h2>
-              <p class="body">Bij LIV Zorg geloven we dat goede zorg begint bij de mensen die haar geven. Ons team bestaat uit betrokken, deskundige en enthousiaste professionals die zich dagelijks inzetten voor het welzijn van onze cliënten.</p>
-            </div>
+          <div class="team-split">
             <div class="team-special">
               <h3>Wat ons team bijzonder maakt</h3>
               <ul class="team-values">
@@ -333,15 +329,18 @@
                 </li>
               </ul>
             </div>
-            <div class="team-roles">
-              <h3>Rollen</h3>
-              <ul class="roles-list">
-                <li>Begeleiders</li>
-                <li>Ambulant hulpverleners</li>
-                <li>Coaches &amp; activiteitenbegeleiders</li>
-                <li>Coördinatoren &amp; management</li>
-              </ul>
+            <div class="team-image">
+              <img src="assets/team.webp" alt="Team LIV Zorg in overleg" loading="lazy">
             </div>
+          </div>
+          <div class="team-roles">
+            <h3>Rollen</h3>
+            <ul class="roles-list">
+              <li>Begeleiders</li>
+              <li>Ambulant hulpverleners</li>
+              <li>Coaches &amp; activiteitenbegeleiders</li>
+              <li>Coördinatoren &amp; management</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -363,7 +362,7 @@
           </article>
           <article class="card accent">
             <p><em>"De medewerkers zijn meer dan zorgverleners, ze voelen als steun in mijn dagelijks leven. Altijd met een glimlach en oprechte betrokkenheid."</em></p>
-            <p><strong>— Mevrouw Hassan</strong></p>
+            <p><strong>— Hassan</strong></p>
           </article>
         </div>
       </section>
