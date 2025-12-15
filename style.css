@@ -84,6 +84,11 @@ ul{padding-left:20px;margin:0;}
 .site-header{
   position:sticky;top:0;z-index:900;background:rgba(237,243,232,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.06);
 }
+@media (max-width:1024px){
+  .nav-open .site-header{
+    z-index:99998!important;
+  }
+}
 .header-inner{
   max-width:1200px;margin:0 auto;
   padding:var(--space-3) var(--space-5);
@@ -999,26 +1004,36 @@ ul{padding-left:20px;margin:0;}
     width:100vw!important;
     height:100vh!important;
     max-width:100vw!important;
-    min-width:auto!important;
+    min-width:100vw!important;
+    margin:0!important;
+    padding:var(--space-8) var(--space-4)!important;
+    background-color:#1a332a!important;
     background:var(--liv-brand-secondary)!important;
     flex-direction:column!important;
     align-items:center!important;
     justify-content:center!important;
-    padding:var(--space-8) var(--space-4)!important;
-    margin:0!important;
     gap:var(--space-6)!important;
-    z-index:9999!important;
+    z-index:99999!important;
     transform:translateX(100%)!important;
     opacity:0!important;
     pointer-events:none!important;
     transition:transform .3s ease,opacity .3s ease!important;
     box-sizing:border-box!important;
     overflow-y:auto!important;
+    border:none!important;
+    outline:none!important;
   }
   .nav-open .nav-list{
     transform:translateX(0)!important;
     opacity:1!important;
     pointer-events:auto!important;
+  }
+  .nav-open body,
+  .nav-open html{
+    overflow:hidden!important;
+    position:fixed!important;
+    width:100%!important;
+    height:100%!important;
   }
   .nav-close-wrapper{
     display:block!important;
@@ -1278,12 +1293,6 @@ ul{padding-left:20px;margin:0;}
     width:100%;
   }
   .core-value-icon{font-size:2.5rem;}
-  .nav-list{
-    min-width:auto!important;
-    width:calc(100% - var(--space-4))!important;
-    max-width:280px;
-    right:var(--space-2);
-  }
   .nav-list .btn.primary.small{
     min-width:auto!important;
     width:100%;
