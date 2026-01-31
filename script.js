@@ -75,7 +75,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 // Scrollspy functionality
 const scrollspyDots = document.querySelectorAll('.scrollspy-dot');
-const sections = ['top', 'diensten', 'over', 'werkwijze', 'ervaringen', 'contact'];
+const sections = ['top', 'welkom', 'diensten', 'over', 'werkwijze', 'ervaringen', 'contact'];
 
 const updateScrollspy = () => {
   if (window.innerWidth < 768) return;
